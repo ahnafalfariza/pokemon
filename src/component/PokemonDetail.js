@@ -34,6 +34,7 @@ const PokemonDetail = ({ pokemonData }) => {
 
   const saveToCollection = (nickname) => {
     const catchedPokemon = {
+      id: new Date().getTime(),
       name: pokemonData.name,
       sprites: pokemonData.sprites,
       nickname: nickname,

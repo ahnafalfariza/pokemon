@@ -4,7 +4,7 @@ export const pokemonReducer = (state, action) => {
       return [...state, action.pokemon];
     }
     case "release_pokemon": {
-      return state.filter((pokemon) => pokemon.nickname !== action.nickname);
+      return state.filter((pokemon) => pokemon.id !== action.id);
     }
     default: {
       return state;
@@ -17,7 +17,7 @@ export const catchAction = (pokemon) => ({
   pokemon,
 });
 
-export const releaseAction = (nickname) => ({
+export const releaseAction = (id) => ({
   type: "release_pokemon",
-  nickname,
+  id,
 });

@@ -26,7 +26,7 @@ const OwnedPokemon = ({ pokemonData }) => {
       </div>
       <button
         className={styles.release}
-        onClick={() => dispatch(releaseAction(pokemonData.nickname))}
+        onClick={() => dispatch(releaseAction(pokemonData.id))}
       >
         Release
       </button>
